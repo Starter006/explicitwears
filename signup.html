@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your EXPLICIT account.">
+  <title>Sign Up | EXPLICIT</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+  <header class="auth-header">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html">EXPLICIT</a>
+      <a class="auth-back" href="index.html">Back to collection</a>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-intro" aria-labelledby="signup-title">
+      <p class="eyebrow mono">EXPLICIT / Account</p>
+      <h1>MAKE IT YOURS.</h1>
+      <p>Create an account for first access to limited drops, saved pieces, and the EXPLICIT community.</p>
+    </section>
+
+    <section class="auth-form-wrap" aria-labelledby="signup-form-title">
+      <h2 id="signup-form-title">Sign up.</h2>
+      <p class="auth-form-intro">Create your account for NO FILTER 001.</p>
+      <form class="auth-form" id="signupForm" novalidate>
+        <div class="auth-field">
+          <label for="signup-name">Full name</label>
+          <input id="signup-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="auth-field">
+          <label for="signup-email">Email</label>
+          <input id="signup-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="auth-field">
+          <label for="signup-password">Password</label>
+          <input id="signup-password" name="password" type="password" autocomplete="new-password" required>
+        </div>
+        <div class="auth-field">
+          <label for="signup-confirm-password">Confirm password</label>
+          <input id="signup-confirm-password" name="confirm-password" type="password" autocomplete="new-password" required>
+        </div>
+        <p class="auth-error" role="alert" aria-live="polite"></p>
+        <button class="button" type="submit">Sign up <span>↗</span></button>
+      </form>
+      <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="supabase.js" defer></script>
+  <script src="auth.js" defer></script>
+</body>
+</html>

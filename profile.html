@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manage your EXPLICIT account profile.">
+  <title>My Profile | EXPLICIT</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+  <header class="auth-header">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html">EXPLICIT</a>
+      <a class="auth-back" href="index.html">Back to collection</a>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-intro" aria-labelledby="profile-title">
+      <p class="eyebrow mono">EXPLICIT / Account</p>
+      <h1 id="profile-title">YOUR PROFILE.</h1>
+      <p>Keep your details current — checkout pre-fills from this information.</p>
+      <nav class="profile-nav" aria-label="Account navigation">
+        <a class="profile-nav-link" href="orders.html">My orders</a>
+        <a class="profile-nav-link" href="forgot.html">Forgot password?</a>
+      </nav>
+    </section>
+
+    <section class="auth-form-wrap profile-wrap" aria-label="Account profile">
+      <div id="profileState"><p class="auth-form-intro">Loading your profile…</p></div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="supabase.js" defer></script>
+  <script src="profile.js" defer></script>
+</body>
+</html>

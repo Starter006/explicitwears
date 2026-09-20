@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log in to your EXPLICIT account.">
+  <title>Login | EXPLICIT</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+  <header class="auth-header">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html">EXPLICIT</a>
+      <a class="auth-back" href="index.html">Back to collection</a>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-intro" aria-labelledby="login-title">
+      <p class="eyebrow mono">EXPLICIT / Account</p>
+      <h1 id="login-title">WELCOME BACK.</h1>
+      <p>Return to your edit. Your saved pieces and drop history are waiting.</p>
+    </section>
+
+    <section class="auth-form-wrap" aria-labelledby="login-form-title">
+      <h2 id="login-form-title">Login.</h2>
+      <p class="auth-form-intro">Enter your details to continue.</p>
+      <form class="auth-form" id="loginForm" novalidate>
+        <div class="auth-field">
+          <label for="login-email">Email</label>
+          <input id="login-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="auth-field">
+          <label for="login-password">Password</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+        </div>
+        <a class="auth-forgot" href="forgot.html">Forgot password?</a>
+        <p class="auth-error" role="alert" aria-live="polite"></p>
+        <button class="button" type="submit">Login <span>↗</span></button>
+      </form>
+      <p class="auth-switch">New here? <a href="signup.html">Sign up</a></p>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="supabase.js" defer></script>
+  <script src="auth.js" defer></script>
+</body>
+</html>

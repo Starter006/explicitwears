@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reset your EXPLICIT account password.">
+  <title>Forgot Password | EXPLICIT</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+  <header class="auth-header">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html">EXPLICIT</a>
+      <a class="auth-back" href="index.html">Back to collection</a>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-intro" aria-labelledby="forgot-title">
+      <p class="eyebrow mono">EXPLICIT / Account</p>
+      <h1 id="forgot-title">LOCKED OUT.</h1>
+      <p>It happens. Enter your email and we will send a secure reset — a one-time link and a 6-digit code. Nothing changes until you set a new password.</p>
+    </section>
+
+    <section class="auth-form-wrap" aria-labelledby="forgot-form-title">
+      <h2 id="forgot-form-title">Forgot password.</h2>
+      <p class="auth-form-intro" id="forgotIntro">We will email you a secure reset link.</p>
+      <form class="auth-form" id="forgotForm" novalidate>
+        <div class="auth-field">
+          <label for="forgot-email">Email</label>
+          <input id="forgot-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <p class="auth-error" role="alert" aria-live="polite"></p>
+        <button class="button" type="submit">Send reset email <span>↗</span></button>
+      </form>
+      <p class="auth-switch">Remembered it? <a href="login.html">Login</a></p>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="supabase.js" defer></script>
+  <script src="forgot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your EXPLICIT order history.">
+  <title>My Orders | EXPLICIT</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+  <header class="auth-header">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html">EXPLICIT</a>
+      <a class="auth-back" href="index.html">Back to collection</a>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-intro" aria-labelledby="orders-title">
+      <p class="eyebrow mono">EXPLICIT / Account</p>
+      <h1 id="orders-title">YOUR ORDERS.</h1>
+      <p>Every drop you've claimed, tracked in one place.</p>
+    </section>
+
+    <section class="auth-form-wrap orders-wrap" aria-label="Order history">
+      <div id="ordersState"><p class="auth-form-intro">Loading your orders…</p></div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="supabase.js" defer></script>
+  <script src="orders.js" defer></script>
+</body>
+</html>

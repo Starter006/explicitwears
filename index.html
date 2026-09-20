@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EXPLICIT — premium streetwear. NO FILTER 001.">
+  <title>EXPLICIT | NO FILTER 001</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+      <a class="wordmark" href="#home" data-route="home">EXPLICIT</a>
+      <nav id="mainNav" aria-label="Main navigation">
+        <button data-route="home">Home</button>
+        <button data-route="shop">NO FILTER 001</button>
+        <button data-category="T-Shirts">Core tees</button>
+        <button data-category="Accessories">Accessories</button>
+      </nav>
+      <div class="header-tools">
+        <button class="header-action" id="headerSearch" aria-label="Open shop search">⌕</button>
+        <a class="header-action" id="authAction" href="login.html">Login</a>
+        <button class="cart-button" data-route="cart" aria-label="Open shopping cart">Bag <span class="cart-count" id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="view active" id="homeView">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow mono">Drop 001 / NO FILTER</p>
+          <h1>MAKE IT EXPLICIT.</h1>
+          <p>Premium streetwear for people who do not need permission. Clean graphics, heavyweight silhouettes, and nothing hidden.</p>
+          <button class="button" data-route="shop">Enter drop 001 <span>↗</span></button>
+        </div>
+        <div class="hero-art">
+          <img src="background.jpeg" alt="EXPLICIT NO FILTER collection artwork" id="heroImage">
+          <span class="hero-tag mono">NO FILTER 001</span>
+          <span class="hero-note mono">EXPLICIT<br>Nothing hidden</span>
+        </div>
+      </div>
+      <div class="marquee mono"><div class="marquee-track"><span>NO FILTER</span>✳<span>MAKE IT EXPLICIT</span>✳<span>NOTHING HIDDEN</span>✳<span>NO FILTER</span>✳</div></div>
+      <section class="section">
+        <div class="section-head"><h2>NO FILTER 001</h2><p>Six controlled pieces. Heavyweight essentials. One clear point of view.</p></div>
+        <div class="product-grid" id="featuredGrid"></div>
+      </section>
+      <div class="category-strip">
+        <div class="category-tile"><span class="mono">01 / Core</span><h3>Core tees</h3><button data-category="T-Shirts">Explore ↗</button></div>
+        <div class="category-tile"><span class="mono">02 / Statement</span><h3>Make it explicit</h3><button data-route="shop">Explore ↗</button></div>
+        <div class="category-tile"><span class="mono">03 / Details</span><h3>Accessories</h3><button data-category="Accessories">Explore ↗</button></div>
+      </div>
+    </section>
+
+    <section class="view" id="shopView">
+      <div class="shop-view">
+        <div class="shop-head"><div><p class="eyebrow mono">Drop 001 / Limited quantity</p><h2>NO FILTER 001.</h2></div><p>Heavyweight essentials with one clear message. Nothing hidden.</p></div>
+        <div class="filters">
+          <label class="search-wrap"><span>⌕</span><span class="sr-only">Search products</span><input id="searchInput" type="search" placeholder="Search the collection"></label>
+          <select class="filter-control" id="categoryFilter" aria-label="Filter by category"><option value="All">All categories</option><option>T-Shirts</option><option>Accessories</option><option>Outerwear</option><option>Bottoms</option></select>
+          <select class="filter-control" id="priceFilter" aria-label="Filter by price"><option value="All">Any price</option><option value="100">Under $100</option><option value="150">Under $150</option></select>
+          <select class="filter-control" id="sortFilter" aria-label="Sort products"><option value="featured">Sort: Featured</option><option value="newest">Sort: Newest</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option></select>
+        </div>
+        <p class="results-note mono" id="resultsNote"></p>
+        <div class="product-grid" id="shopGrid"></div>
+        <div class="empty-state" id="emptyState"><h3>No pieces found.</h3><p>Try a different search or clear your filters.</p><button class="button secondary" id="clearFilters">Clear filters</button></div>
+      </div>
+    </section>
+
+    <section class="view" id="detailView"><div class="detail-view" id="detailContent"></div></section>
+
+    <section class="view" id="cartView">
+      <div class="cart-view">
+        <div class="cart-head"><div><p class="eyebrow mono">Your edit</p><h2>Shopping bag.</h2></div><span class="mono" id="cartItemLabel"></span></div>
+        <div class="cart-empty" id="cartEmpty"><h3>Your bag is light.</h3><p>There are no pieces here yet.</p><button class="button" data-route="shop">Start shopping</button></div>
+        <div class="cart-layout" id="cartLayout"><div id="cartLines"></div><aside class="summary"><h3>Summary</h3><div class="summary-row"><span>Subtotal</span><span id="subtotal">$0</span></div><div class="summary-row"><span>Shipping</span><span>Free</span></div><div class="summary-row total"><span>Total</span><span id="total">$0</span></div><button class="button" id="checkoutButton">Continue to checkout ↗</button><p class="mono" style="color: var(--muted); margin: 1rem 0 0; line-height: 1.5;">Free shipping. Payment coming soon.</p></aside></div>
+      </div>
+    </section>
+
+    <section class="view" id="checkoutView"><div class="checkout-view" id="checkoutContent"></div></section>
+  </main>
+
+  <footer><span class="wordmark">EXPLICIT</span><span class="mono">NO FILTER / DROP 001</span></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="supabase.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
